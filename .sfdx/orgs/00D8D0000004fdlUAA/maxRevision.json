@@ -1,0 +1,71 @@
+{
+  "serverMaxRevisionCounter": 22,
+  "sourceMembers": {
+    "Profile__Admin": {
+      "serverRevisionCounter": 10,
+      "lastRetrievedFromServer": null,
+      "memberType": "Profile",
+      "isNameObsolete": false
+    },
+    "ApexClass__AccountJITHandler": {
+      "serverRevisionCounter": 11,
+      "lastRetrievedFromServer": 11,
+      "memberType": "ApexClass",
+      "isNameObsolete": false
+    },
+    "ApexClass__AccountJITHandlerTest": {
+      "serverRevisionCounter": 12,
+      "lastRetrievedFromServer": 12,
+      "memberType": "ApexClass",
+      "isNameObsolete": false
+    },
+    "ApexClass__ContactJITHandler": {
+      "serverRevisionCounter": 13,
+      "lastRetrievedFromServer": 13,
+      "memberType": "ApexClass",
+      "isNameObsolete": false
+    },
+    "ApexClass__ContactJITHandlerTest": {
+      "serverRevisionCounter": 14,
+      "lastRetrievedFromServer": 14,
+      "memberType": "ApexClass",
+      "isNameObsolete": false
+    },
+    "ApexClass__JITTestUtil": {
+      "serverRevisionCounter": 15,
+      "lastRetrievedFromServer": 15,
+      "memberType": "ApexClass",
+      "isNameObsolete": false
+    },
+    "ApexClass__SamlModel": {
+      "serverRevisionCounter": 16,
+      "lastRetrievedFromServer": 16,
+      "memberType": "ApexClass",
+      "isNameObsolete": false
+    },
+    "ApexClass__SimpleJITHandler": {
+      "serverRevisionCounter": 17,
+      "lastRetrievedFromServer": 17,
+      "memberType": "ApexClass",
+      "isNameObsolete": false
+    },
+    "ApexClass__SimpleJITHandlerTest": {
+      "serverRevisionCounter": 22,
+      "lastRetrievedFromServer": 22,
+      "memberType": "ApexClass",
+      "isNameObsolete": false
+    },
+    "ApexClass__UserJITHandler": {
+      "serverRevisionCounter": 19,
+      "lastRetrievedFromServer": 19,
+      "memberType": "ApexClass",
+      "isNameObsolete": false
+    },
+    "ApexClass__UserJITHandlerTest": {
+      "serverRevisionCounter": 20,
+      "lastRetrievedFromServer": 20,
+      "memberType": "ApexClass",
+      "isNameObsolete": false
+    }
+  }
+}

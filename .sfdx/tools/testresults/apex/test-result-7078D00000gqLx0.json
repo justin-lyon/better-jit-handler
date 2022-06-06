@@ -1,0 +1,55 @@
+{
+  "summary": {
+    "outcome": "Failed",
+    "testsRan": 1,
+    "passing": 0,
+    "failing": 1,
+    "skipped": 0,
+    "passRate": "0%",
+    "failRate": "100%",
+    "skipRate": "0%",
+    "testStartTime": "Mon Jun 06 2022 10:26:58 PM",
+    "testExecutionTimeInMs": 22,
+    "testTotalTimeInMs": 22,
+    "commandTimeInMs": 944,
+    "hostname": "https://customization-innovatio150-dev-ed.my.salesforce.com",
+    "orgId": "00D8D0000004fdlUAA",
+    "username": "test-ez1uqxulehaj@example.com",
+    "testRunId": "7078D00000gqLx0",
+    "userId": "0058D000001fbpvQAA",
+    "totalLines": 0,
+    "coveredLines": 0,
+    "testRunCoverage": "0%",
+    "orgWideCoverage": "90%"
+  },
+  "tests": [
+    {
+      "id": "07M8D000002yoyTUAQ",
+      "queueItemId": "7098D000000NvdjQAC",
+      "stackTrace": "Class.JITTestUtil.queryOneRoleByName: line 149, column 1\nClass.SimpleJITHandlerTest.updateUser_givenExistingExternal_shouldGetUpdatedAccountContactAndUser: line 151, column 1",
+      "message": "System.QueryException: List has no rows for assignment to SObject",
+      "asyncApexJobId": "7078D00000gqLx0QAE",
+      "methodName": "updateUser_givenExistingExternal_shouldGetUpdatedAccountContactAndUser",
+      "outcome": "Fail",
+      "apexLogId": null,
+      "apexClass": {
+        "id": "01p8D000002kPqiQAE",
+        "name": "SimpleJITHandlerTest",
+        "namespacePrefix": null,
+        "fullName": "SimpleJITHandlerTest"
+      },
+      "runTime": 22,
+      "testTimestamp": "2022-06-06T13:26:58.000+0000",
+      "fullName": "SimpleJITHandlerTest.updateUser_givenExistingExternal_shouldGetUpdatedAccountContactAndUser",
+      "diagnostic": {
+        "exceptionMessage": "System.QueryException: List has no rows for assignment to SObject",
+        "exceptionStackTrace": "Class.JITTestUtil.queryOneRoleByName: line 149, column 1\nClass.SimpleJITHandlerTest.updateUser_givenExistingExternal_shouldGetUpdatedAccountContactAndUser: line 151, column 1",
+        "className": "JITTestUtil",
+        "compileProblem": "",
+        "lineNumber": 149,
+        "columnNumber": 1
+      }
+    }
+  ],
+  "codecoverage": []
+}

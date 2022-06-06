@@ -1,0 +1,55 @@
+{
+  "summary": {
+    "outcome": "Failed",
+    "testsRan": 1,
+    "passing": 0,
+    "failing": 1,
+    "skipped": 0,
+    "passRate": "0%",
+    "failRate": "100%",
+    "skipRate": "0%",
+    "testStartTime": "Mon Jun 06 2022 10:33:35 PM",
+    "testExecutionTimeInMs": 38,
+    "testTotalTimeInMs": 38,
+    "commandTimeInMs": 611,
+    "hostname": "https://customization-innovatio150-dev-ed.my.salesforce.com",
+    "orgId": "00D8D0000004fdlUAA",
+    "username": "test-ez1uqxulehaj@example.com",
+    "testRunId": "7078D00000gqM2n",
+    "userId": "0058D000001fbpvQAA",
+    "totalLines": 0,
+    "coveredLines": 0,
+    "testRunCoverage": "0%",
+    "orgWideCoverage": "90%"
+  },
+  "tests": [
+    {
+      "id": "07M8D000002yoz2UAA",
+      "queueItemId": "7098D000000Nve3QAC",
+      "stackTrace": "Class.SimpleJITHandlerTest.updateUser_givenExistingExternal_shouldGetUpdatedAccountContactAndUser: line 155, column 1",
+      "message": "System.DmlException: Insert failed. First exception on row 0; first error: FIELD_INTEGRITY_EXCEPTION, To create or update users for this profile, go to Setup > Digital Experiences > Settings and select Allow using standard external profiles for self-registration, user creation, and login.: [ProfileId]",
+      "asyncApexJobId": "7078D00000gqM2nQAE",
+      "methodName": "updateUser_givenExistingExternal_shouldGetUpdatedAccountContactAndUser",
+      "outcome": "Fail",
+      "apexLogId": null,
+      "apexClass": {
+        "id": "01p8D000002kPqiQAE",
+        "name": "SimpleJITHandlerTest",
+        "namespacePrefix": null,
+        "fullName": "SimpleJITHandlerTest"
+      },
+      "runTime": 38,
+      "testTimestamp": "2022-06-06T13:33:36.000+0000",
+      "fullName": "SimpleJITHandlerTest.updateUser_givenExistingExternal_shouldGetUpdatedAccountContactAndUser",
+      "diagnostic": {
+        "exceptionMessage": "System.DmlException: Insert failed. First exception on row 0; first error: FIELD_INTEGRITY_EXCEPTION, To create or update users for this profile, go to Setup > Digital Experiences > Settings and select Allow using standard external profiles for self-registration, user creation, and login.: [ProfileId]",
+        "exceptionStackTrace": "Class.SimpleJITHandlerTest.updateUser_givenExistingExternal_shouldGetUpdatedAccountContactAndUser: line 155, column 1",
+        "className": "SimpleJITHandlerTest",
+        "compileProblem": "",
+        "lineNumber": 155,
+        "columnNumber": 1
+      }
+    }
+  ],
+  "codecoverage": []
+}
