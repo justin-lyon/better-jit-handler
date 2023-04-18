@@ -1,79 +1,91 @@
 @isTest
 private class AccountJITHandlerTest {
-	@TestSetup
-	static void makeData(){
-		Account partnerAccount = JITTestUtil.createAccount(JITTestUtil.ACCOUNT_NAME);
-		partnerAccount.AccountNumber = JITTestUtil.ACCOUNT_NUMBER;
-		insert partnerAccount;
-	}
+  @TestSetup
+  static void makeData() {
+    Account partnerAccount = JITTestUtil.createAccount(
+      JITTestUtil.ACCOUNT_NAME
+    );
+    partnerAccount.AccountNumber = JITTestUtil.ACCOUNT_NUMBER;
+    insert partnerAccount;
+  }
 
-	static TestMethod void getAccount_givenNewAccount_shouldGetNewAccount() {
-		Id samlSsoProviderId = '00100000000000a';
-		Id communityId = null;
-		Id portalId = null;
+  static testMethod void getAccount_givenNewAccount_shouldGetNewAccount() {
+    Id samlSsoProviderId = '00100000000000a';
+    Id communityId = null;
+    Id portalId = null;
 
-		User samlUser = JITTestUtil.createUser(JITTestUtil.LAST_NAME, UserInfo.getProfileId());
-		Account newAccount = JITTestUtil.queryOneAccount();
+    User samlUser = JITTestUtil.createUser(
+      JITTestUtil.LAST_NAME,
+      UserInfo.getProfileId()
+    );
+    Account newAccount = JITTestUtil.queryOneAccount();
 
-		Map<String, String> attributes = JITTestUtil.getAttributes(
-			newAccount,
-			new Contact(),
-			samlUser);
+    Map<String, String> attributes = JITTestUtil.getAttributes(
+      newAccount,
+      new Contact(),
+      samlUser
+    );
 
-		String newAccountName = newAccount.Name + '2';
-		attributes.put('Account.Name', newAccountName);
+    String newAccountName = newAccount.Name + '2';
+    attributes.put('Account.Name', newAccountName);
 
-		SamlModel payload = new SamlModel(
-			samlSsoProviderId,
-			communityId,
-			portalId,
-			JITTestUtil.FEDERATION_IDENTIFIER,
-			attributes,
-			JITTestUtil.SAML_ASSERTION);
+    SamlModel payload = new SamlModel(
+      samlSsoProviderId,
+      communityId,
+      portalId,
+      JITTestUtil.FEDERATION_IDENTIFIER,
+      attributes,
+      JITTestUtil.SAML_ASSERTION
+    );
 
-		AccountJITHandler handler = new AccountJITHandler(payload);
-		Test.startTest();
+    AccountJITHandler handler = new AccountJITHandler(payload);
+    Test.startTest();
 
-			Account updatedAccount = handler.getAccount();
+    Account updatedAccount = handler.getAccount();
 
-		Test.stopTest();
+    Test.stopTest();
 
-		System.assertNotEquals(newAccount.Name, updatedAccount.Name);
-		System.assertEquals(newAccountName, updatedAccount.Name);
-		System.assertEquals(null, updatedAccount.Id);
-	}
+    System.assertNotEquals(newAccount.Name, updatedAccount.Name);
+    System.assertEquals(newAccountName, updatedAccount.Name);
+    System.assertEquals(null, updatedAccount.Id);
+  }
 
-	static TestMethod void getAccount_givenExistingAccount_shouldGetUpdatedAccount() {
-		Id samlSsoProviderId = '00100000000000a';
-		Id communityId = null;
-		Id portalId = null;
+  static testMethod void getAccount_givenExistingAccount_shouldGetUpdatedAccount() {
+    Id samlSsoProviderId = '00100000000000a';
+    Id communityId = null;
+    Id portalId = null;
 
-		User samlUser = JITTestUtil.createUser(JITTestUtil.LAST_NAME, UserInfo.getProfileId());
-		Account existingAccount = JITTestUtil.queryOneAccount();
+    User samlUser = JITTestUtil.createUser(
+      JITTestUtil.LAST_NAME,
+      UserInfo.getProfileId()
+    );
+    Account existingAccount = JITTestUtil.queryOneAccount();
 
-		Map<String, String> attributes = JITTestUtil.getAttributes(
-			existingAccount,
-			new Contact(),
-			samlUser);
+    Map<String, String> attributes = JITTestUtil.getAttributes(
+      existingAccount,
+      new Contact(),
+      samlUser
+    );
 
-		attributes.put('User.Account', existingAccount.Id);
+    attributes.put('User.Account', existingAccount.Id);
 
-		SamlModel payload = new SamlModel(
-			samlSsoProviderId,
-			communityId,
-			portalId,
-			JITTestUtil.FEDERATION_IDENTIFIER,
-			attributes,
-			JITTestUtil.SAML_ASSERTION);
+    SamlModel payload = new SamlModel(
+      samlSsoProviderId,
+      communityId,
+      portalId,
+      JITTestUtil.FEDERATION_IDENTIFIER,
+      attributes,
+      JITTestUtil.SAML_ASSERTION
+    );
 
-		AccountJITHandler handler = new AccountJITHandler(payload);
-		Test.startTest();
+    AccountJITHandler handler = new AccountJITHandler(payload);
+    Test.startTest();
 
-			Account updatedAccount = handler.getAccount();
+    Account updatedAccount = handler.getAccount();
 
-		Test.stopTest();
+    Test.stopTest();
 
-		System.assertEquals(existingAccount.Name, updatedAccount.Name);
-		System.assertNotEquals(null, updatedAccount.Id);
-	}
+    System.assertEquals(existingAccount.Name, updatedAccount.Name);
+    System.assertNotEquals(null, updatedAccount.Id);
+  }
 }
