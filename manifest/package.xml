@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>JITTestUtil</members>
+        <members>SamlModel</members>
+        <members>SimpleJITHandler</members>
+        <members>SimpleJITHandlerTest</members>
+        <members>UserJITHandler</members>
+        <members>UserJITHandlerTest</members>
+        <name>ApexClass</name>
+    </types>
+    <version>54.0</version>
+</Package>
